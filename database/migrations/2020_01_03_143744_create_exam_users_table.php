@@ -17,6 +17,7 @@ class CreateExamUsersTable extends Migration
             $table->unsignedInteger('exam_id');
             $table->unsignedBigInteger('user_id');
             $table->timestamp('expire_time')->nullable();
+            $table->integer('score')->nullable();
 
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
